@@ -10,4 +10,15 @@ class Blogger < ApplicationRecord
     def likes
         self.posts.map{|posts| posts.likes}.sum
     end
+
+    def most_liked_post
+        max_like = 0
+        self.posts.select do |post|
+            if post.likes > max_like
+                post.likes == max_like
+            end
+            max_like
+            byebug
+        end
+    end
 end

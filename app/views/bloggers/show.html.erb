@@ -4,6 +4,4 @@ This is the show page
 <p><%= @blogger.name %></p>
 <p><%= @blogger.age %></p>
 <p><%= @blogger.likes %></p>
-<p><% self.posts.each do |posts| %></p>
-        <%= posts.title %>
-    <% end %>
+<p><% @blogger.most_liked_post %></p>
