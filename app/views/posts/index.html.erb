@@ -1,0 +1,7 @@
+<h1> This is the list of all of our Posts!</h1>
+
+
+
+<% @posts.each do |post| %>
+ <%= link_to post.title, post_path(post.id) %><br><br>
+ <% end %>

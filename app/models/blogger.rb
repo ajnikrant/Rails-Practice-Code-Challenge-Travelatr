@@ -12,13 +12,6 @@ class Blogger < ApplicationRecord
     end
 
     def most_liked_post
-        max_like = 0
-        self.posts.select do |post|
-            if post.likes > max_like
-                post.likes == max_like
-            end
-            max_like
-            byebug
-        end
+        self.posts.map{|post| post.likes}.max
     end
 end
