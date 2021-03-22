@@ -6,4 +6,8 @@ class Blogger < ApplicationRecord
     validates :name, uniqueness: true
     validates :age, numericality: {greater_than: 0 }
     validates :bio, length: {minimum: 30}
+
+    def likes
+        self.posts.map{|posts| posts.likes}.sum
+    end
 end
