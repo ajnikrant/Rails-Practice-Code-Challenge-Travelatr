@@ -27,8 +27,9 @@ end
       title: Faker::Hipster.sentence(3),
       content: Faker::Hipster.paragraphs(4),
       likes: 0,
-      blogger: blogger,
-      destination: Destination.all.sample
+      blogger_id: Blogger.all.sample.id,
+      destination_id: Destination.all.sample.id
     })
   end
 end
+ puts "seeded"
